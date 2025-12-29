@@ -2,9 +2,9 @@
   Date 18 Dec 2025
 */
 
-const Players = () => { 
+const Players = () => {
     return (
-        <section>
+        <section >
             <div>Players</div>
         </section>
     )

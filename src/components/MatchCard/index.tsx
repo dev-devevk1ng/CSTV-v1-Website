@@ -27,33 +27,41 @@ const MatchCard = ({ matchData }: MatchCardProps) => {
     const navigate = useNavigate();
 
     return (
-        <div className="
-            w-100 h-40 flex bg-(--bg-secondary) p-1
-            xs:w-100  xs:bg-yellow-300
-            sm:w-75 sm:bg-red-400
-            md:w-85 md:bg-blue-400
-            lg:w-85 lg:bg-green-400
-            xl:w-85 xl:bg-fuchsia-400
-            2xl:w-90 2xl:bg-gray-600
+        <div 
+            className="
+            min-w-80 h-40 flex bg-(--bg-secondary) p-1
+
+            xs:w-80 
+            sm:w-80 
+            md:w-80 
+            lg:w-80 
+            xl:w-80 
+            2xl:w-80  
             
             "
             onClick={() => { navigate(`/matches/${matchData.slug}`) }}
         >
             <div
-                className="w-1/4 h-38 flex flex-col justify-evenly items-center p-1 bg-amber-300
-                sm:
+                className="w-1/4 h-38 flex flex-col justify-evenly gap-0
+                
                 "
             >
                 <img
-                    className="h-full w-20 object-contain "
+                    className="min-h-2/4 w-20 object-contain p-1"
                     src={ctIcon}
                     alt=""
                 />
-                <div className="flex justify-center font-semibold text-sm">{matchData.teams[0]}</div>
-                <div className='flex justify-center font-semibold'>{matchData.score[0]}</div>
+                <div 
+                    className="min-h-1/4 flex justify-center items-center font-semibold text-xs 
+                    "
+                >
+                    {matchData.teams[0]}
+                </div>
+                <div className='min-h-1/4 flex justify-center items-center font-semibo'>{matchData.score[0]}</div>
             </div>
 
             <div
+
                 style={{ backgroundImage: `url(${tournamentIcon})` }}
                 className="w-2/4 relative flex flex-col justify-center items-center gap-2 p-1 bg-center bg-no-repeat bg-size-[6rem_auto]
                 sm:
@@ -69,8 +77,13 @@ const MatchCard = ({ matchData }: MatchCardProps) => {
                 />
 
                 <div
-                    className="relative z-10 flex flex-col items-center">
-                    <p className='text-base font-semibold text-(--glass-text-color) text-shadow-(--glass-text-shadow)'>
+                    className="relative flex flex-col items-center">
+                    <p 
+                        className="
+                        text-center font-semibold text-(--glass-text-color) text-shadow-(--glass-text-shadow) text-sm
+                        
+                        "
+                    >
                         {matchData.date}
                     </p>
                     <p className='text-center text-xs text-(--glass-text-color) text-shadow-(--glass-text-shadow)'>
@@ -81,17 +94,22 @@ const MatchCard = ({ matchData }: MatchCardProps) => {
             </div>
 
             <div
-                className="w-1/4 h-38 flex flex-col justify-evenly items-center p-1 bg-amber-300
-                sm:
+                className="w-1/4 h-38 flex flex-col justify-evenly gap-0
+                
                 "
             >
                 <img
-                    className="h-full w-20 object-contain "
+                    className="min-h-2/4 w-20 object-contain p-1"
                     src={trIcon}
                     alt=""
                 />
-                <div className="text-center font-semibold text-xs whitespace-pre-line bg-red-500">{matchData.teams[1]}</div>
-                <div className="text-center font-semibold">{matchData.score[1]}</div>
+                <div 
+                    className="min-h-1/4 flex justify-center items-center text-center font-semibold text-xs
+                    "
+                >
+                    {matchData.teams[1]}
+                </div>
+                <div className="min-h-1/4 flex justify-center items-center text-center font-semibold ">{matchData.score[1]}</div>
             </div>
         </div>
     )

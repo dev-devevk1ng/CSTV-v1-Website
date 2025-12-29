@@ -4,7 +4,7 @@
 */
 
 import type { Match } from "@/types/match";
-import { Matches } from "@/data/matches.mock";
+import { Matches, Categories } from "@/data/matches.mock";
 
 export const MatchService = {
   async getAll(): Promise<Match[]> {
@@ -15,3 +15,9 @@ export const MatchService = {
     return Matches.find(match => match.slug === slug);
   }
 };
+
+export const CategoriesService = {
+  async getAll() {
+    return Categories
+  }
+}

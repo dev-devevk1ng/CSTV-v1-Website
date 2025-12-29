@@ -5,28 +5,24 @@
 
 import { NavLink } from "react-router-dom";
 
-// Theme
+// Themes Styles
 import styles from "@/components/NavigationBar/styles.module.css";
 
 // Modal
-import { ProfileModal } from "@/components/Modal/ProfileModal";
-import { useProfileModal } from "@/hooks/useProfileModal.ts";
-
 import { ThemeModal } from "@/components/Modal/ThemeModal";
 import { useThemeModal } from "@/hooks/useThemeModal"
 
+// Sidebar
+import { useSidebar } from "@/contexts/sidebar/useSidebar";
+
+
 import navbarIcon from "@/assets/cs2-favicon.png";
-import { FaUserCircle } from "react-icons/fa";
+
 import { FiSettings } from "react-icons/fi";
+import { MdMenu } from "react-icons/md";
 
 
 const NavigationBar = () => {
-
-    const {
-        isOpen: isProfileOpen,
-        open: openProfile,
-        close: closeProfile,
-    } = useProfileModal();
 
     const {
         isOpen: isThemeOpen,
@@ -34,9 +30,13 @@ const NavigationBar = () => {
         close: closeTheme,
     } = useThemeModal();
 
+    const {
+        openSidebar: openSidebar
+    } = useSidebar()
+
     return (
         <>
-            <nav className="w-full h-15 flex items-center">
+            <nav className="w-full h-10 flex items-center mb-2">
 
                 <img className="w-10 h-10" src={navbarIcon} />
 
@@ -101,7 +101,7 @@ const NavigationBar = () => {
                         
                         "
                     >
-                        <button className={styles.ThemeButton} onClick={openTheme}>
+                        <button className="text-(--text-primary)" onClick={openTheme}>
                             <FiSettings className={styles.ThemeIcon} />
 
                         </button>
@@ -111,23 +111,20 @@ const NavigationBar = () => {
                         className="
                         h-10 flex items-center cursor-pointer font-semibold text-xs 
                         sm:text-sm 
-                        md:text-base 
+                        md:text-base
                         
                         "
                     >
-                        <button className={styles.ProfileButton} onClick={openProfile}>
-                            <FaUserCircle size={30} />
+                        <button className="text-(--text-primary)" onClick={openSidebar}>
+                            <MdMenu className={styles.ThemeIcon} />
                         </button>
                     </li>
+
 
                 </ul>
 
             </nav>
 
-            <ProfileModal
-                isOpen={isProfileOpen}
-                onClose={closeProfile}
-            />
             <ThemeModal
                 isOpen={isThemeOpen}
                 onClose={closeTheme}

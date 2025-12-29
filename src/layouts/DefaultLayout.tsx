@@ -2,16 +2,16 @@
   Date 18 Dec 2025
 */
 
-import { Outlet } from "react-router-dom";
-
-import styles from "./DefaultLayout.module.css";
 //components
 import NavigationBar from "@/components/NavigationBar";
+import SideBar from "@/components/Sidebar"
+import { Outlet } from "react-router-dom";
 
 const DefaultLayout = () => {
     return (
-        <div className={styles.defaultLayout}>
+        <div className="flex flex-col p-2">
             <NavigationBar />
+            <SideBar />
             <Outlet />
         </div>
     )

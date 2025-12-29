@@ -1,8 +1,31 @@
 /*
   Date 18 Dec 2025
 */
+/*
+    2020
+    MIBR (oplano) vs FAZE - BLAST
+    MIBR (oplano) vs Astralis - BLAST
+
+    2021
+    GODSENT vs FURIA
+
+    2022
+    faze vs navi - iem katowice 2022
+    faze vs g2 - iem katowice 2022
+
+    2024
+
+
+    2025
+    legacy vs vitality - blast austin major
+    legacy vs faze - blast austin major
+
+    
+*/
 
 import type { Match } from '@/types/match';
+
+export const Categories = ["2025", "2024", "2023", "2022", "2021", "2020", "2019", "2017"]
 
 export const Matches: Match[] = [
     {
@@ -170,17 +193,387 @@ export const Matches: Match[] = [
             },
         ],
     },
-    {
+    {   // fix statsOverview
         id: 4,
-        teams: ['GODSENT', 'Heroic'],
-        tournament: "IEM Winter 2021",
-        date: "2021-12-02",
-        slug: "godsent-vs-heroic-iem-winter-2021-2021-12-02",
-        score: [16, 13],
+        teams: ['Astralis', 'Liquid'],
+        tournament: "IEM Challenge 2020",
+        date: "2020-12-20",
+        slug: "astralis-vs-liquid-iem-challenge-2020-2020-12-20",
+        score: [3, 0],
+        mapsOverview: {
+            bestOf: 5,
+            mapList: [
+                { name: 'Inferno', score: [16, 11], pickBy: 'Astralis' },
+                { name: 'Overpass', score: [16, 11], pickBy: 'Liquid' },
+                { name: 'Dust2', score: [16, 10], pickBy: 'Astralis' },
+                { name: 'Nuko', score: null, pickBy: 'Liquid' },
+                { name: 'Mirage', score: null, pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Mirage',
+                winner: 'GODSENT',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+    {   // fix statsOverview
+        id: 5,
+        teams: ['MIBR', 'Falcons'],
+        tournament: "BLAST Austin Major",
+        date: "2025-16-09",
+        slug: "mibr-vs-falcons-blast-major-austin-2025-2025-06-09",
+        score: [2, 1],
         mapsOverview: {
             bestOf: 3,
             mapList: [
-                { name: 'Mirage', score: [16, 13], pickBy: 'decider' },
+                { name: 'Ancient', score: [13, 6], pickBy: 'MIBR' },
+                { name: 'Nuko', score: [13, 9], pickBy: 'Falcons' },
+                { name: 'Inferno', score: [22, 20], pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Mirage',
+                winner: 'GODSENT',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+    {   // fix statsOverview
+        id: 6,
+        teams: ['Natus Vincere', '00NATION'],
+        tournament: "Esl Pro League Season 17",
+        date: "2023-03-21",
+        slug: "natus-vincere-vs-00nation-esl-pro-league-season-17-2023-03-21",
+        score: [2, 1],
+        mapsOverview: {
+            bestOf: 3,
+            mapList: [
+                { name: 'Ancient', score: [16, 14], pickBy: '00NATION' },
+                { name: 'Overpass', score: [8, 16], pickBy: 'Natus Vincere' },
+                { name: 'Mirage', score: [16, 4], pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Mirage',
+                winner: 'GODSENT',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+    {   // fix statsOverview
+        id: 7,
+        teams: ['MIBR', 'Astralis'],
+        tournament: "BLAST Pro Series 2019 Miami",
+        date: "2019-04-13",
+        slug: "mbir-vs-astralis-blast-pro-series-2019-miami-2019-04-13",
+        score: [16, 2],
+        mapsOverview: {
+            bestOf: 1,
+            mapList: [
+                { name: 'Overpass', score: [16, 2], pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Overpass',
+                winner: 'MIBR',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+    {   // fix statsOverview
+        id: 8,
+        teams: ['MIBR', 'Astralis'],
+        tournament: "BLAST Pro Series 2019 Miami",
+        date: "2019-04-13",
+        slug: "mbir-vs-astralis-blast-pro-series-2019-miami-2019-04-13",
+        score: [16, 2],
+        mapsOverview: {
+            bestOf: 1,
+            mapList: [
+                { name: 'Overpass', score: [16, 2], pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Overpass',
+                winner: 'MIBR',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+    {   // fix statsOverview
+        id: 9,
+        teams: ['Spirit', 'Faze'],
+        tournament: "Perfect World Shanghai Major 2024",
+        date: "2024-12-15",
+        slug: "spirit-vs-faze-perfect-world-shangai-major-2024-2024-12-15",
+        score: [16, 2],
+        mapsOverview: {
+            bestOf: 1,  
+            mapList: [
+                { name: 'Nuke', score: [13, 8], pickBy: 'Faze' },
+                { name: 'Ancient', score: [6, 13], pickBy: 'Spirit' },
+                { name: 'Dust2', score: [13, 11], pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Overpass',
+                winner: 'MIBR',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+        {   // fix statsOverview
+        id: 10,
+        teams: ['SK Gaming', 'Cloud9'],
+        tournament: "ESL One Cologne 2017",
+        date: "2017-07-09",
+        slug: "sk-vs-cloud9-esl-cologne-2017-2017-07-09",
+        score: [3, 0],
+        mapsOverview: {
+            bestOf: 5,  
+            mapList: [
+                { name: 'Cobblestone', score: [16, 9], pickBy: 'SK Gaming' },
+                { name: 'Train', score: [16, 12], pickBy: 'CLoud9' },
+                { name: 'Inferno', score: [16, 14], pickBy: 'SK Gaming' },
+                { name: 'Mirage', score: null, pickBy: 'Cloud9' },
+                { name: 'Cache', score: null, pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Overpass',
+                winner: 'MIBR',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+
+    /* 
+        =============================================================================================================
+        =============================================================================================================
+    */
+
+    {   // fix statsOverview
+        id: 9,
+        teams: ['Spirit', 'Faze'],
+        tournament: "Perfect World Shanghai Major 2024",
+        date: "2024-12-15",
+        slug: "spirit-vs-faze-perfect-world-shangai-major-2024-2024-12-15",
+        score: [16, 2],
+        mapsOverview: {
+            bestOf: 1,  
+            mapList: [
+                { name: 'Nuke', score: [13, 8], pickBy: 'Faze' },
+                { name: 'Ancient', score: [6, 13], pickBy: 'Spirit' },
+                { name: 'Dust2', score: [13, 11], pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Overpass',
+                winner: 'MIBR',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+    {   // fix statsOverview
+        id: 4,
+        teams: ['Astralis', 'Liquid'],
+        tournament: "IEM Challenge 2020",
+        date: "2020-12-20",
+        slug: "astralis-vs-liquid-iem-challenge-2020-2020-12-20",
+        score: [3, 0],
+        mapsOverview: {
+            bestOf: 5,
+            mapList: [
+                { name: 'Inferno', score: [16, 11], pickBy: 'Astralis' },
+                { name: 'Overpass', score: [16, 11], pickBy: 'Liquid' },
+                { name: 'Dust2', score: [16, 10], pickBy: 'Astralis' },
+                { name: 'Nuko', score: null, pickBy: 'Liquid' },
+                { name: 'Mirage', score: null, pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Mirage',
+                winner: 'GODSENT',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },
+    {   // fix statsOverview
+        id: 6,
+        teams: ['Natus Vincere', '00NATION'],
+        tournament: "Esl Pro League Season 17",
+        date: "2023-03-21",
+        slug: "natus-vincere-vs-00nation-esl-pro-league-season-17-2023-03-21",
+        score: [2, 1],
+        mapsOverview: {
+            bestOf: 3,
+            mapList: [
+                { name: 'Ancient', score: [16, 14], pickBy: '00NATION' },
+                { name: 'Overpass', score: [8, 16], pickBy: 'Natus Vincere' },
+                { name: 'Mirage', score: [16, 4], pickBy: 'decider' },
+            ],
+        },
+        statsOverview: [
+            {
+                map: 'Mirage',
+                winner: 'GODSENT',
+                team1: [
+                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
+                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
+                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
+                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
+                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                ],
+                team2: [
+                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
+                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
+                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
+                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
+                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                ]
+            },
+        ],
+    },   
+    {   // fix statsOverview
+        id: 5,
+        teams: ['MIBR', 'Falcons'],
+        tournament: "BLAST Austin Major",
+        date: "2025-16-09",
+        slug: "mibr-vs-falcons-blast-major-austin-2025-2025-06-09",
+        score: [2, 1],
+        mapsOverview: {
+            bestOf: 3,
+            mapList: [
+                { name: 'Ancient', score: [13, 6], pickBy: 'MIBR' },
+                { name: 'Nuko', score: [13, 9], pickBy: 'Falcons' },
+                { name: 'Inferno', score: [22, 20], pickBy: 'decider' },
             ],
         },
         statsOverview: [
@@ -205,35 +598,76 @@ export const Matches: Match[] = [
         ],
     },
     {
-        id: 4,
-        teams: ['GODSENT', 'Heroic'],
-        tournament: "IEM Winter 2021",
-        date: "2021-12-02",
-        slug: "godsent-vs-heroic-iem-winter-2021-2021-12-02",
-        score: [16, 13],
+        id: 0,
+        teams: ['IMPERIAL', 'Cloud9'],
+        tournament: "PGL Major Antwerp 2022",
+        date: "2022-05-16",
+        slug: "imperial-vs-cloud9-pgl-major-antwep-2022-2022-05-16",
+        score: [2, 1],
         mapsOverview: {
             bestOf: 3,
             mapList: [
-                { name: 'Mirage', score: [16, 13], pickBy: 'decider' },
+                { name: 'Overpass', score: [25, 23], pickBy: 'IMPERIAL' },
+                { name: 'Vertigo', score: [9, 16], pickBy: 'Cloud9' },
+                { name: 'Mirage', score: [16, 3], pickBy: 'decider' },
             ],
         },
         statsOverview: [
             {
-                map: 'Mirage',
-                winner: 'GODSENT',
+                map: 'Overpass',
+                winner: 'IMPERIAL',
                 team1: [
-                    { player: "João 'felps' Vasconcellos", kills: 21, deaths: 20, adr: 83.0, rating: 1.05 },
-                    { player: "Epitacio 'TACO' de Melo", kills: 22, deaths: 20, adr: 81.5, rating: 1.12 },
-                    { player: "Eduardo 'dumau' Wolkmer", kills: 16, deaths: 21, adr: 71.6, rating: 0.91 },
-                    { player: "Bruno 'latto' Rebelatto", kills: 29, deaths: 17, adr: 79.8, rating: 1.27 },
-                    { player: "Bruno 'b4rtiN' Câmara", kills: 13, deaths: 22, adr: 50.9, rating: 0.73 },
+                    { player: "Gabriel 'FalleN' Toledo", kills: 35, deaths: 28, adr: 71, rating: 1.14 },
+                    { player: "Fernando 'fer' Alvarenga", kills: 33, deaths: 29, adr: 78, rating: 1.14 },
+                    { player: "Ricardo 'boltz' Prass", kills: 26, deaths: 28, adr: 76, rating: 0.98 },
+                    { player: "Vinicius 'VINI' Figueiredo", kills: 31, deaths: 29, adr: 64, rating: 1.03 },
+                    { player: "Lincoln 'fnx' Lau", kills: 20, deaths: 39, adr: 50, rating: 0.61 },
                 ],
                 team2: [
-                    { player: "Casper 'cadiaN' Møller", kills: 14, deaths: 20, adr: 53.3, rating: 0.81 },
-                    { player: "René 'TeSeS' Madsen", kills: 19, deaths: 21, adr: 69.7, rating: 0.89 },
-                    { player: "Martin 'stavn' Lund", kills: 27, deaths: 21, adr: 110.0, rating: 1.53 },
-                    { player: "Rasmus 'sjuush' Beck", kills: 22, deaths: 20, adr: 70.6, rating: 1.14 },
-                    { player: "Ismail 'refrezh' Ali", kills: 17, deaths: 20, adr: 60.7, rating: 0.86 },
+                    { player: "Dmitry 'sh1ro' Sokolov", kills: 37, deaths: 27, adr: 69, rating: 1.17 },
+                    { player: "Sergey 'Ax1Le' Rykhtorov", kills: 36, deaths: 39, adr: 91, rating: 1.26 },
+                    { player: "Abay 'HObbit' Khassenov", kills: 25, deaths: 30, adr: 58, rating: 0.83 },
+                    { player: "Vladislav 'nafany' Gorshkov", kills: 31, deaths: 34, adr: 380, rating: 0.99 },
+                    { player: "Timofey 'interz' Yakushin", kills: 23, deaths: 24, adr: 44, rating: 1.00 },
+
+                ]
+            },
+            {
+                map: 'Vertigo',
+                winner: 'Cloud9',
+                team1: [
+                    { player: "Gabriel 'FalleN' Toledo", kills: 12, deaths: 18, adr: 60, rating: 0.81 },
+                    { player: "Fernando 'fer' Alvarenga", kills: 21, deaths: 19, adr: 90, rating: 1.10 },
+                    { player: "Ricardo 'boltz' Prass", kills: 11, deaths: 18, adr: 65, rating: 0.74 },
+                    { player: "Vinicius 'VINI' Figueiredo", kills: 9, deaths: 23, adr: 52, rating: 0.46 },
+                    { player: "Lincoln 'fnx' Lau", kills: 10, deaths: 17, adr: 53, rating: 0.71 },
+                ],
+                team2: [
+                    { player: "Dmitry 'sh1ro' Sokolov", kills: 16, deaths: 10, adr: 62.9, rating: 1.25 },
+                    { player: "Sergey 'Ax1Le' Rykhtorov", kills: 21, deaths: 15, adr: 87.2, rating: 1.28 },
+                    { player: "Abay 'HObbit' Khassenov", kills: 23, deaths: 13, adr: 89.7, rating: 1.45 },
+                    { player: "Vladislav 'nafany' Gorshkov", kills: 18, deaths: 13, adr: 78.3, rating: 1.24 },
+                    { player: "Timofey 'interz' Yakushin", kills: 17, deaths: 13, adr: 83.2, rating: 1.23 },
+
+                ]
+            },
+            {
+                map: 'Mirage',
+                winner: 'IMPERIAL',
+                team1: [
+                    { player: "Fernando 'fer' Alvarenga", kills: 25, deaths: 8, adr: 127.4, rating: 1.95 },
+                    { player: "Vinicius 'VINI' Figueiredo", kills: 20, deaths: 9, adr: 107.2, rating: 1.66 },
+                    { player: "Gabriel 'FalleN' Toledo", kills: 14, deaths: 6, adr: 83.9, rating: 1.49 },
+                    { player: "Lincoln 'fnx' Lau", kills: 15, deaths: 6, adr: 56.6, rating: 1.29 },
+                    { player: "Ricardo 'boltz' Prass", kills: 8, deaths: 12, adr: 66.1, rating: 0.95 },
+                ],
+                team2: [
+                    { player: "Dmitry 'sh1ro' Sokolov", kills: 6, deaths: 16, adr: 34.8, rating: 0.38 },
+                    { player: "Sergey 'Ax1Le' Rykhtorov", kills: 9, deaths: 16, adr: 64.6, rating: 0.76 },
+                    { player: "Abay 'HObbit' Khassenov", kills: 7, deaths: 18, adr: 51.8, rating: 0.45 },
+                    { player: "Vladislav 'nafany' Gorshkov", kills: 14, deaths: 15, adr: 85.5, rating: 1.05 },
+                    { player: "Timofey 'interz' Yakushin", kills: 4, deaths: 17, adr: 38.2, rating: 0.38 },
+
                 ]
             },
         ],
