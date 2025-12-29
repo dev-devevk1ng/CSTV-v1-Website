@@ -1,0 +1,43 @@
+/*
+    Date 24 Dec 2025
+*/
+
+
+.cardContainer {
+    width: 20rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border-color);
+    
+    padding: 0.5rem;
+    background-color: var(--card-bg);
+    transition: box-shadow 0.3s ease;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.teamOne, .teamTwo {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   background-color: lightpink;
+}
+.teamOneLogo, .teamTwoLogo {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    background-color: brown;
+}
+.vsText {
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}

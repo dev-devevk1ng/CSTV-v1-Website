@@ -1,0 +1,14 @@
+/*
+    Date 24 Dec 2025
+*/
+
+:root[data-theme="blast-pro-series"] {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f1f1f1;
+  
+  --text-primary: #2c2c2c;
+  --text-secondary: #6b7280;
+  
+  --border-color: linear-gradient(90deg, #4C3EE7, #4C3EE7, #EC2C8C, #EC2C8C, #F26A21, #F9C200);
+  --hover-bg: #1e293b;
+}

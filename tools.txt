@@ -1,0 +1,68 @@
+/*
+    24 Dec 2025
+*/
+
+typescript
+react
+node
+mysql
+ORM (Prisma) // ponte entre código e o banco SQL.
+supabase ou Firebase
+Supabase Auth
+
+------------------------
+
+🌐 Browser
+   ↓
+⚛️ React (Frontend)
+   ↓ fetch / axios
+🌍 HTTP / REST API
+   ↓
+🧠 NestJS (Backend - Node.js) / ExpressJS
+   ↓
+🧩 Prisma (ORM)
+   ↓
+🐘 PostgreSQL (Database)
+   ↓
+☁️ Supabase (Host + Auth + Storage)
+
+------------------------
+
+⚛️ React
+
+Interface do usuário
+Cards, páginas, rotas
+Consome a API
+
+🌍 HTTP / REST
+
+Comunicação entre frontend e backend
+GET /tournaments
+GET /tournaments/:slug
+
+🧠 NestJS
+
+Regras de negócio
+Autenticação
+Validações
+Controladores e serviços
+
+🧩 Prisma
+
+ORM
+Conecta NestJS ↔ PostgreSQL
+Migrações
+Tipagem forte
+
+🐘 PostgreSQL
+
+Onde os dados vivem
+Estruturado
+Relacional
+Estatísticas
+
+☁️ Supabase
+
+Hospeda o PostgreSQL
+Auth (login, JWT)
+Storage (imagens de jogadores, times, torneios)

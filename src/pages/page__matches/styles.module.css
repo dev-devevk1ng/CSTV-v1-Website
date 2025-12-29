@@ -1,0 +1,10 @@
+/*
+    18 Dec 2025
+*/
+
+.container {
+    display: flex;
+
+    height: 100%;
+    gap: 1rem;
+}

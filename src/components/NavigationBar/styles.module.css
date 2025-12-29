@@ -1,0 +1,55 @@
+/*
+    Date 18 Dec 2025
+*/
+
+.navbar {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.Icon {
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    background-color: pink;
+}
+
+.PagesContainer {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 2.5rem;
+
+    background-color: var(--bg-secondary);
+}
+
+.PageContainer {
+    display: flex;
+    align-items: center;
+
+    height: 2.5rem;
+
+    list-style-type: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.ThemeButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.5rem;
+    height: 2.5rem;
+
+    transition: background-color 0.3s ease;
+}
+
+.ThemeIcon {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+}
